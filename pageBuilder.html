@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pageBuilder.css" />
+    <title>PageBuilder</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div id="right-side">
+        <h1 id="title">בונה מסך</h1>
+        <p>!ברוכים הבאים לבונה מסכים</p>
+        <p>בואו נתחיל לבנות את האלמנטים שלכם</p>
+
+        <br />
+        <input type="color" id="useColor" value="#64ffff" />
+        <br />
+        <label>
+          :רוחב
+          <input type="number" id="widthNum" /> </label
+        ><br />
+        <label>
+          :גובה
+          <input type="number" id="heightNum" />
+        </label>
+
+        <br />
+        <label>
+          :תוכן
+          <textarea name="" id="text" cols="15" rows="1"></textarea>
+        </label>
+
+        <label>
+          :צבע הגופן
+          <input type="color" id="fontColor" for="colorPicker" />
+        </label>
+
+        <br />
+        <label>
+          :גודל הגופן
+          <input type="text" id="fontSize" />
+        </label>
+
+        <br />
+        <label>
+          :עובי מסגרת
+          <input type="text" id="frameWidth" />
+        </label>
+
+        <br />
+        <label>
+          :סגנון מסגרת
+          <input type="text" id="frameStyle" />
+        </label>
+
+        <br />
+
+        <label>
+          :צבע מסגרת
+          <input type="color" id="frameColor" />
+        </label>
+
+        <br />
+        <label>
+          :ריווח חיצוני
+          <input type="text" id="marginInput" />
+        </label>
+
+        <br />
+        <label>
+          :ריווח פנימי
+          <input type="text" id="paddingInput" />
+        </label>
+
+        <br />
+        <label>
+          :לעגל את הבורדר
+          <input type="text" id="borderRadius" />
+        </label>
+
+        <br />
+        <label>
+          סוג האלמנט:
+          <select name="elem-type" id="elemType">
+            <option value="div">div</option>
+            <option value="p">p</option>
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            <option value="h4">h4</option>
+            <option value="h5">h5</option>
+            <option value="h6">h6</option>
+            <option value="span">span</option>
+            <option value="ul">ul</option>
+            <option value="li">li</option>
+          </select>
+        </label>
+        <br />
+        <label>
+          :ציר האיקס
+          <input type="text" id="xOffSet" />
+        </label>
+        <br />
+        <label>
+          :ציר הוואי
+          <input type="text" id="yOffSet" />
+        </label>
+        <br />
+        <label>
+          :ציר הזד
+          <input type="text" id="zOffSet" />
+        </label>
+        <br />
+        <div class="button-wrapper">
+          <button onclick="addElements()" id="createBtn" class="btns btn">
+            הוסף
+          </button>
+          <button id="saveBtn" class="btns btn">שמור</button>
+          <button id="cleanBtn" class="btns btn">נקה</button>
+        </div>
+      </div>
+      <div class="left-side">
+        <div id="container"></div>
+      </div>
+    </div>
+
+    <script src="./pageBuilder.js"></script>
+  </body>
+</html>
