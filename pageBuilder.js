@@ -41,15 +41,28 @@ function addElements() {
 
   container.appendChild(box);
 }
-// window.addEventListener('load', loadDocument);
+window.addEventListener("load", loadDocument);
 
 removeButton.addEventListener("click", function () {
   container.innerHTML = "";
   localStorage.clear();
-  alert("You have removed the container childs and from the local storage");
+  alert(
+    "You have removed the container childs and from the local storage,  Please refresh the site to delete the saved element"
+  );
 });
 
 saveButton.addEventListener("click", function () {
   localStorage.setItem("container", container.outerHTML);
   alert("You have saved the container to the local storage");
 });
+
+// Function to load the document from localStorage
+function loadDocument() {
+  const savedData = localStorage.getItem("container");
+  if (savedData) {
+    container.outerHTML = savedData;
+    alert("Saved Data loaded successfully!");
+  } else {
+    alert("No saved document found.");
+  }
+}
